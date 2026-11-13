@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เกมทายใจ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h1>เกมทายใจ</h1>
+        <p>กรุณากรอกชื่อของคุณ: <input type="text" id="playerName"></p>
+        <button onclick="startGame()">startGame</button>
+    </div>
+    <script>
+        function startGame() {
+            let name = document.getElementById("playerName").value;
+            if (name.trim() ==="") {
+                alert("กรุณากรอกชื่อของคุณ");
+            } else {
+                window.location.href = "game.html?" + encodeURIComponent(name);
+            }
+        }
+
+    </script>
+</body>
+</html>
